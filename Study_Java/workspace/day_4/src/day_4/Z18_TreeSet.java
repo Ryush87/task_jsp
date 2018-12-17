@@ -1,0 +1,104 @@
+package day_4;
+
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.TreeSet;
+
+/**
+ * 
+ * List : 순서존재, 중복허용
+ * Set : 손서없이, 중복불가
+ *   중복체크 방법 : Hash기법 -> HashSet(중복체크가 가장 빠름) O[1]
+ *  		: Binary Search Tree -> TreeSet O[log n]
+ *  		: Linear search 순차검색(중복체크가 가장 느림) O[n]
+ * TreeSet 
+ * 원소추가시 중복체크하고,
+ * 1. hashCode()
+ * 2. equals()
+ * 중복된 객체면저장하지 않음, 중복이 안되었을때만 저장
+ * @author Ryush
+ *
+ */
+public class Z18_TreeSet {
+	public static void main(String[] args) {
+		TreeSet<String> ts = new TreeSet<String>();
+		ts.add("호랑이");
+		ts.add("기린");
+		ts.add("코끼리");
+		ts.add("호랑이"); //중복된 것은 저장이 안된다.
+		ts.add("악어");
+		ts.add("북금곰");
+		
+		System.out.println(ts); //hs.toString();
+		System.out.println(ts.size());
+		System.out.println(ts.contains("캠핑"));
+		
+		//순회 방법은 HashSet과 동일
+		//TreeSet 의 최대 장점은 정렬, 저장된 위치 자체가 정렬 된 것
+		//정렬, 범위정렬시 TreeSet이 가장 유리하다(가장 빠르다)
+		for (String s : ts) { // 향상된 for문
+			System.out.print(s + ", ");
+		}
+		System.out.println();
+		
+		Iterator<String> iter = ts.iterator(); //순회를 하기 위한 단방향 이터레이터 객체를 얻어옴(1회용)
+		while (iter.hasNext()) {
+			System.out.print(iter.next() + ", ");
+		}
+		System.out.println();
+		
+		System.out.println(ts.subSet("기린", "악어"));
+		System.out.println(ts.subSet("기린", true, "악어", true)); //포함여부
+		
+		TreeSet<Girl> tsGirl = new TreeSet<Girl>(new Comparator<Girl>() {
+
+			@Override
+			public int compare(Girl o1, Girl o2) {
+				// TODO Auto-generated method stub
+				//return 0;
+				return o2.age - o1.age; //내림차순
+			}
+		});
+		Girl g1 = new Girl("곰순이", 22);
+		Girl g2 = new Girl("곰순이", 22);
+		Girl g3 = new Girl("하니", 25);
+		Girl g4 = new Girl("곱창", 21);
+		Girl g5 = new Girl("매드", 222);
+		Girl g6 = new Girl("바보", 2442);
+		tsGirl.add(g1);
+		tsGirl.add(g2);
+		tsGirl.add(g3);
+		tsGirl.add(g4);
+		tsGirl.add(g5);
+		tsGirl.add(g6);
+		System.out.println(tsGirl);
+		System.out.println(tsGirl.size());
+		System.out.println(g1.hashCode());
+		System.out.println(g2.hashCode());
+		System.out.println(g1.equals(g2));
+	}
+}
+
+class Girl implements Comparable<Girl> { //객체를 비교할수 있도록, 비교 메서드 작성, 내부비교기준
+	String name = "";
+	int age;
+	public Girl() { 
+		// TODO Auto-generated constructor stub
+	}
+	public Girl(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
+	@Override
+	public int compareTo(Girl o) { // 0 : 같음, 음수: 큰, 양수 : 작은
+		// TODO Auto-generated method stub
+//		return 0;
+		return this.age - o.age;
+	}
+	@Override  //jdk 1.5버전에 추가된 어노테이션
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "[" + name + "], [" + age + "]"; 		
+	}
+}

@@ -1,0 +1,31 @@
+package day_4;
+
+import java.util.HashSet;
+
+/**
+ * 
+ * List : 순서존재, 중복허용
+ * Set : 손서없이, 중복불가
+ *   중복체크 방법 : Hash기법 -> HashSet(중복체크가 가장 빠름) O[1]
+ *  		: Binary Search Tree -> TreeSet O[log n]
+ *  		: Linear search 순차검색(중복체크가 가장 느림) O[n]
+ * 원소추가시 중복체크하고,
+ * 1. hashCode()
+ * 2. equals()
+ * 중복된 객체면저장하지 않음, 중복이 안되었을때만 저장
+ * @author Ryush
+ *
+ */
+public class Z17_HashSet {
+	public static void main(String[] args) {
+		HashSet<String> hs = new HashSet<String>();
+		hs.add('캠핑');
+		hs.add('11');
+		hs.add('3.14');
+		hs.add('true');
+		System.out.println(hs); //hs.toString();
+		System.out.println(hs.size());
+		System.out.println(hs.contains('캠핑'));
+		
+	}
+}

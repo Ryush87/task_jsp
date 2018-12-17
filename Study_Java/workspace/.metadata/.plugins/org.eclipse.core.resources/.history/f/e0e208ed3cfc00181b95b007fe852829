@@ -1,0 +1,34 @@
+package day_3;
+
+import java.io.FileReader;
+import java.util.Arrays;
+
+/**
+ * 
+ * 문자기반 입력스트림 Reader
+ * @author Ryush
+ *
+ */
+public class Z08_IO {
+	public static void main(String[] args) {
+		String fileUrl ="src\\day_3\\ex_files\\input_test.txt";
+		try (FileReader fr = new FileReader(fileUrl)) {
+			//int data = fr.read();
+			//System.out.println((char)data);
+			
+//			int data;
+//			while ((data = fr.read()) != -1) {
+//				System.out.println((char)data);
+//			}
+			
+			char[] data = new char[4];
+			int num = fr.read(data);
+			System.out.println(Arrays.toString(data));
+			String s = new String(data, 0, num);
+			System.out.println(Arrays.toString(s));
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	} // end of main
+} // end of class

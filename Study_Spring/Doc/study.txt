@@ -1,0 +1,79 @@
+2018.11.19.
+- 개발환경 셋팅
+: spring 파일 다운로드 (https://spring.io/tools3/sts/all)
+: 첨부파일 다운로드 (http://blog.naver.com/vega2k)
+: tomcat8 다운로드 (https://tomcat.apache.org/download-80.cgi#8.5.35)
+: Maven repositiory 디렉토리 하위폴더 및 파일 삭제 (C:\users\kosta\.m2\repository)
+: pom.xml설정
+
+- sts.exe 실행
+- 톰캣서버 추가
+- Package Explorer 창에서 2가지 파일(Javaconfig.zip, Xmlconfig.zip) import
+- Design Pattern vs Refactoring(GoF Pattern)
+- DL(Dependency Lookup)
+	: JND(Java Nameing And Directiory Interface)
+- DI(Denpendency Injection)
+	:Javax.sql
+- 표준프레임워크 포털(http://www.egovframe.go.kr/)
+
+- Spring Doc (https://docs.spring.io/spring/docs/4.3.20.BUILD-SNAPSHOT/javadoc-api/index.html)
+
+- Oracle Doc (https://docs.oracle.com/javase/7/docs/api/)
+
+- MVNrepository (https://mvnrepository.com/)
+
+- DI(Dependency Interface) 코딩 테스트 패키지 순서
+	1. xml에 모든 설정(spring v1.xx), (ex//myspring.di.xml)
+	2. annotation + xml 설정(spring v2.5), (ex//myspring.di.xml.config)
+		@Componnent, Respository , @Service, #Controller
+		<context:component-scan base-package=""/>
+	3. Java Config 프로젝트 (spring v3.0), (ex//myspring.di.annot.config)
+		:annotation 만 사용, xml 설정 사용하지 않음
+		:@Bean, @Autowired, @Value, @Qualifier, @Configuaration, @componentScan
+	4. Java File 자제에 직접 annotation 문법으로 설정
+
+- DB 연결
+	myspring.user.vo 패키지 복사
+	config > SqlMapConfig.xml
+	config > StudentMapper.xml
+	config > UserMapper.xml 3개 파일 복사
+	config > app_context.xml 파일에 이어서 작업
+	myspring.user.test > DatabaseTest.java 파일에 이어서 작업
+	:테스트DB ip:192.168.1.17
+	:UserMapper.xml - table의 컬럼명과 VO객체의 getter/setter 메서드명이 동일한경우(resultType 이라는 속성)
+	:StudentMapper.xml - table의 컬럼명과 VO객체의 getter/setter 메서드명이 상이한경우(resultMap 이라는 속성)
+	:myspring.user.tes > DatabaseTest.java 작업 (DB 연결 후 select)
+
+- DB DAO
+	myspring.user.dao
+	myspring.user.dao.mapper, 
+	myspring.user.service 
+	위 3개 패키지 복사
+	config > app_context.xml 파일에 이어서 작업
+	:myspring.user.tes > DatabaseTestService.java 작업 (DB 연결 후 insert 후 select)
+	
+- AOP 용어설명
+	:라이브러리 설치(pom.xml 수정)
+	:myspring.aop.xml 패키지 복사 후 수정
+	:myspring.aop.annot 패키지 복사 후 수정
+
+- Transation 실습
+
+- Postman 크롭 앱 설치
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

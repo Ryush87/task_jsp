@@ -1,0 +1,20 @@
+package day_3;
+
+/**
+ * 
+ * static (변수, 메서드)멤버에서는 non-static 멤버를 참조할 수 없다.
+ * @author Ryush
+ *
+ */
+public class Z03_ExceptionHandling {
+	
+	public void a() {
+		System.out.println("a Method start");
+		System.out.println("a Method end");
+	}
+	public static void main(String[] args) {
+		System.out.println("main start");
+		a();
+		System.out.println("main end");
+	} // end of main
+} // end of class

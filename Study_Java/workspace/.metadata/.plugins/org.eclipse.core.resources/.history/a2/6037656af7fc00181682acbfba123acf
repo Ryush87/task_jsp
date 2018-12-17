@@ -1,0 +1,22 @@
+package day_4;
+
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.util.Scanner;
+
+public class Z21_TreeMap {
+	public static void main(String[] args) {
+		try (FileInputStream fis = new FileInputStream("src/day_4/input_test.txt"); Scanner sc = new Scanner(fis)) {
+			 
+			while (sc.hasNext()) {
+				String word = sc.next(); 
+				System.out.println(word);
+			}
+				
+		
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

@@ -1,0 +1,17 @@
+package day_3;
+
+public class Z04_ExceptionHandling {
+	public static void main(String[] args) {
+		MyException me = new MyException();
+		try {
+			throw me;
+		} catch (MyException e) {
+			// TODO: handle exception
+			System.out.println("내가 만든 익셉션이 발생해서 처리함");
+		}
+	} // end of main
+} // end of class
+
+class MyException extends Exception {
+	
+}

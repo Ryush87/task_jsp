@@ -1,0 +1,27 @@
+package day_4;
+
+import java.util.HashMap;
+
+/**
+ * 
+ * List : 순서가 있다. 중복허용
+ * Set : 순서가 없다, 중복허용 없음, 중복된 데이터는 저장하지 않는데 
+ * Map : 하나의 원소가 키:값 쌍으로 구성된 자료의 묶음
+ * 		키는 원소를 구분하는 기준(중복허용 않함)
+ * 		값은 중복이 허용된다.
+ * 		키의 중복을 체크하는 방법은 
+ * 			Hash기법 -> HashMap
+ * 			Binary Search Tree -> TreeMap
+ * @author Ryush
+ *
+ */
+public class Z20_HashMap {
+	public static void main(String[] args) {
+		HashMap hm = new HashMap();
+		hm.put("사과", 1000);
+		hm.put("배", 2000);
+		hm.put("사과", 3000);
+		
+		System.out.println(hm);
+	}
+}

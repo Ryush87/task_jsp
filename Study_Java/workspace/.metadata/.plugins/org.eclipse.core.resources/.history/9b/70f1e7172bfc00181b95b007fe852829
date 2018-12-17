@@ -1,0 +1,13 @@
+package day_3;
+
+/**
+ * 
+ * Input/Output
+ * @author Ryush
+ *
+ */
+public class Z05_IO {
+	public static void main(String[] args) {
+		
+	} // end of main
+} // end of class

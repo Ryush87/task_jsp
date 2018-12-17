@@ -1,0 +1,39 @@
+package day_3;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
+/**
+ * 
+ * Stack : LIFO 구조, 출구, 입구 하나
+ * Queue : FIFO 구조, 출구, 입구 다르다
+ * @author KOSTA
+ *
+ */
+public class Z15_StackQueue {
+	public static void main(String[] args) {
+		Stack<String> st = new Stack<String>(); //제너릭스 표현
+		st.push("사과");
+		st.push("바나나");
+		st.push("배");
+		System.out.println(st);
+		System.out.println(st.pop()); //LIFO 구조로 인해 마지막에 저장된 값이 나온다.
+		System.out.println(st.pop());
+		System.out.println(st.pop());
+		System.out.println(st);
+		System.out.println(st.empty());
+		
+		//Queue 는 interface 라서 객체를 생성할 수 없다.
+		LinkedList<String> lt = new LinkedList<String>();
+		lt.offer("된장국");
+		lt.offer("청국장");
+		lt.offer("부대찌개");
+		System.out.println(lt);
+		System.out.println(lt.poll());
+		System.out.println(lt.poll());
+		System.out.println(lt.poll());
+		System.out.println(lt);
+		
+	} // end of main
+} // end of class

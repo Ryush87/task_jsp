@@ -1,0 +1,23 @@
+package day_3;
+
+import java.util.Scanner;
+
+/**
+ * 
+ * Scanner 클래스 활용
+ * @author Ryush
+ *
+ */
+public class Z10_IO {
+	public static void main(String[] args) {
+		//Scanner 클래스 : 키보드로부터 사용자 입력을 쉽게 받아오기 위해 많이 활용
+		Scanner sc = new Scanner(System.in);
+		sc.nextLine(); // 엔터입력까지의 한줄을 받아옴, 마지막 엔터는 제거 후 문자열로 리턴
+		
+		//위에 라인과 조금 다르다.
+		sc.next(); // String 을 받아옴, 앞부분의 whileSpace 는 제거
+		sc.nextInt();
+		sc.nextDouble();
+		sc.nextBoolean();
+	} // end of main
+} // end of class

@@ -1,0 +1,17 @@
+package day_3;
+
+/**
+ * 
+ * 바이트기반 입력스트림
+ * @author Ryush
+ *
+ */
+public class Z06_IO {
+	public static void main(String[] args) {
+		try (File) {
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

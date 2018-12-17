@@ -1,0 +1,15 @@
+package day_4;
+
+/**
+ * 
+ * 프로세스 : 프로그램이 실행된 것
+ * 쓰레드 : 프로세스에서 수행하는 작업
+ * 멀티 쓰레드 : 포로세스에서 여러 작업을 (시분할하여) 병렬적으로 수행하는 작업
+ * @author Ryush
+ *
+ */
+public class Z22_Thread {
+	public static void main(String[] args) {
+		
+	}
+}

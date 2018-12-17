@@ -1,0 +1,12 @@
+package day_3;
+
+public class Z04_ExceptionHandling {
+	public static void main(String[] args) {
+		MyException me = new MyException();
+		throw me;
+	} // end of main
+} // end of class
+
+class MyException extends Exception {
+	
+}

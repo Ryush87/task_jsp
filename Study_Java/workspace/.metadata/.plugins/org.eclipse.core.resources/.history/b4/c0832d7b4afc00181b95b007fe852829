@@ -1,0 +1,27 @@
+package day_3;
+
+import java.util.ArrayList;
+
+/**
+ * 
+ * 자바 Collection Framework (jdk 1.2에서 제공됨)
+ * 배열(가장 빠른 자료구조) ; 같은 타입만 저장가능, 크기를 지정해야만 함, 크기를 변경할 수 없음
+ * 배열을 대체하기 위한 자료구조 출현
+ * List 계열 : 순서있음(index 존재함), 데이터 중복허용, ArrayList(=Vector), LinkedList
+ * Set 계열 : 순서없음, 데이터 중복불가
+ * Map 계열 : key = value 의 구조로 하나의 원소로 구성
+ * @author Ryush
+ *
+ */
+public class Z13_CollectionFramework {
+	public static void main(String[] args) {
+		 ArrayList al = new ArrayList();
+		 al.add("안녕");
+		 al.add(3.14);
+		 al.add(ture);
+		 al.add(100);
+		 
+		 System.out.println(al.toString());
+		 
+	} // end of main
+} // end of class

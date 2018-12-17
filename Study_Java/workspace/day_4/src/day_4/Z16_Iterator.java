@@ -1,0 +1,48 @@
+package day_4;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
+
+/**
+ * 
+ * 자료뮦음 순회를 위한 객체
+ * Iterator 단방향
+ * ListIterator 양방향
+ * @author Ryush
+ *
+ */
+public class Z16_Iterator {
+	public static void main(String[] args) {
+		ArrayList<String> al = new ArrayList<String>();
+		al.add("호랑이");
+		al.add("사자");
+		al.add("토끼");
+		al.add("강아지");
+		
+		//선형 자료구조 : 이전노드, 다음노드 사이의 관계가 1:1관계
+		//비선영 자료구조 : 이전노드, 다음노드 사이의 관계가 1:다, 다:1, 다:다 관계(그래프)
+		//순회 : 전체의 원소를 빠짐없이 1번씩 접근방법
+		for (int i = 0; i < al.size(); i++) {
+			System.out.print(al.get(i) + ", ");
+		}
+		System.out.println();
+		for (String s : al) { // 향상된 for문
+			System.out.print(s + ", ");
+		}
+		System.out.println();
+		
+		Iterator<String> iter = al.iterator(); //순회를 하기 위한 단방향 이터레이터 객체를 얻어옴(1회용)
+		while (iter.hasNext()) {
+			System.out.print(iter.next() + ", ");
+		}
+		System.out.println();
+		//iter = al.iterator(); //1회용 : 커서를 다시 앞으로 돌리수 없어서, 객체를 새로 얻어와야 함.
+		
+		ListIterator<String> liter = al.listIterator(); // 양방향 순회가 가능함
+		System.out.print(liter.next() + ", ");
+		System.out.print(liter.next() + ", ");
+		System.out.print(liter.next() + ", ");
+		System.out.print(liter.previous() + ", ");
+	}
+}

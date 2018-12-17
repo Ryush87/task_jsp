@@ -1,0 +1,18 @@
+[Eclipse shortKey]
+ctrl + spaceBar : 자동완성
+ctrl + shift + c : 커서행 or 블럭행 이 주석 처리됨(토글)(= ctrl + /)
+ctrl + f11 : 컴파일 후 실행
+ctrl + alt + 방향키(위, 아래) : 커서가 있는 곳에서 위, 아래 한줄 복사
+alt + 방향키(위/아래) : 커서가 있는 행이 위 아래로 이동 됨 
+ctrl + shift + f : 블럭영역 or 소스전체가 줄정리
+ctrl + 마우스 클릭 : 클래스/메서드/변수의 정의된 곳으로 화면 이동(= f3)
+
+
+자동완성 키워드
+main : main 메서드 자동완성
+syso : system.out.println();
+sw : switch 문
+if : if문
+
+참조 사이트
+- 온라인 저지 사이트 : 코딩 관련 문제 (https://ko.wikipedia.org/wiki/%EC%98%A8%EB%9D%BC%EC%9D%B8_%EC%A0%80%EC%A7%80)

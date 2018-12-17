@@ -1,0 +1,23 @@
+package day_3;
+
+import java.io.FileWriter;
+
+/**
+ * 
+ * 문자기반 출력스트림 Writer
+ * @author KOSTA
+ *
+ */
+public class Z09_IO {
+	public static void main(String[] args) {
+		String fileUrl ="src\\day_3\\ex_files\\output_test_str.txt";
+		try (FileWriter fw = new FileWriter(fileUrl)) {
+			String str = "안녕하세요";
+			fw.write(str);
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	} // end of main
+} // end of class

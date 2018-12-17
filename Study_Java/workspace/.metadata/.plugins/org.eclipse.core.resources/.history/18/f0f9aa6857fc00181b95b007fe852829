@@ -1,0 +1,24 @@
+package day_3;
+
+import java.util.Stack;
+
+/**
+ * 
+ * Stack : LIFO 구조, 출구, 입구 하나
+ * Queue : FIFO 구조, 출구, 입구 다르다
+ * @author KOSTA
+ *
+ */
+public class Z15_StackQueue {
+	public static void main(String[] args) {
+		Stack<String> st = new Stack<String>(); //제너릭스 표현
+		st.push("사과");
+		st.push("바나나");
+		st.push("배");
+		System.out.println(st);
+		System.out.println(st.pop()); //LIFO 구조로 인해 마지막에 저장된 값이 나온다.
+		System.out.println(st.pop());
+		System.out.println(st.pop());
+		System.out.println(st);
+	} // end of main
+} // end of class

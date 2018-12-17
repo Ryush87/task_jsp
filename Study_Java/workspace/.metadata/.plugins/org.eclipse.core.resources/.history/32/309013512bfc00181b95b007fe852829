@@ -1,0 +1,31 @@
+package day_3;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+/**
+ * 
+ * Input/Output
+ * 바이트기반 입력스트림 : InputStream
+ * @author Ryush
+ *
+ */
+public class Z05_IO {
+	public static void main(String[] args) {
+		try {
+			//파일명 : 절대경로, 상대경로
+//			FileInputStream fis = new FileInputStream("G:\\Works\\Edu\\Study_Java\\workspace\\day_3\\src\\day_3\\ex_files\\input_test.txt"); //절대경로
+			FileInputStream fis = new FileInputStream("ex_files\\input_test.txt"); //상대경로
+			int data = fis.read(); //1byte read
+			System.out.println(data);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	} // end of main
+} // end of class
